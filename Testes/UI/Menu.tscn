@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://UI/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Music and Sounds/8bit-OnTheOffensive.wav" type="AudioStream" id=2]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -47,6 +48,11 @@ margin_right = 63.0
 margin_bottom = 68.0
 text = "Quit"
 flat = true
+
+[node name="Background" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -7.091
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
