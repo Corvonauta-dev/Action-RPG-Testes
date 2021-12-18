@@ -83,7 +83,7 @@ script = ExtResource( 17 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 100, 102 )
 format = 1
-tile_data = PoolIntArray( -1, 2, 0, -65536, 1, 0, -65535, 2, 0, -65534, 2, 0, -65533, 1, 0, 65535, 0, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 0, 0, 131071, 0, 0, 65536, 2, 0, 65537, 2, 0, 65538, 3, 0, 65539, 2, 0 )
+tile_data = PoolIntArray( -131082, 2, 0, -131081, 2, 0, -131080, 2, 0, -131079, 3, 0, -131078, 2, 0, -131077, 2, 0, -131076, 0, 0, -131075, 3, 0, -131074, 2, 0, -131073, 2, 0, -196608, 2, 0, -196607, 0, 0, -196606, 2, 0, -196605, 2, 0, -196604, 2, 0, -196603, 0, 0, -196602, 2, 0, -196601, 2, 0, -196600, 2, 0, -196599, 0, 0, -196598, 2, 0, -65546, 0, 0, -65545, 0, 0, -65544, 0, 0, -65543, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -10, 0, 0, -9, 0, 0, -8, 0, 0, -7, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 2, 0, -65536, 1, 0, -65535, 2, 0, -65534, 2, 0, -65533, 1, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 131062, 0, 0, 131063, 0, 0, 131064, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 2, 0, 65537, 2, 0, 65538, 3, 0, 65539, 2, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 196598, 0, 0, 196599, 0, 0, 196600, 0, 0, 196601, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 119, 83 )
@@ -100,6 +100,7 @@ position = Vector2( 119, 83 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="Buildings" type="YSort" parent="YSort"]
+position = Vector2( -1, 0 )
 
 [node name="Apartament01" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( 49, 0 )
@@ -119,19 +120,265 @@ position = Vector2( 151, 102 )
 [node name="Apartment06" parent="YSort/Buildings" instance=ExtResource( 6 )]
 position = Vector2( 350, 102 )
 
-[node name="Apartment07" parent="YSort/Buildings" instance=ExtResource( 11 )]
-position = Vector2( -50, -102 )
-
 [node name="Apartment08" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 149, -102 )
 
 [node name="Apartment09" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 250, -101 )
 
+[node name="Apartment10" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 450, 0 )
+
+[node name="Apartment11" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 551, 0 )
+
+[node name="Apartament02" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 551, -102 )
+
+[node name="Apartament03" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -948, -306 )
+
+[node name="Apartment12" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -849, -306 )
+
+[node name="Apartment13" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -749, -306 )
+
+[node name="Apartment14" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -549, -306 )
+
+[node name="Club01" parent="YSort/Buildings" instance=ExtResource( 8 )]
+position = Vector2( -449, -306 )
+
+[node name="Apartament04" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -349, -306 )
+
+[node name="Apartment15" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -149, -306 )
+
+[node name="Park01" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( -49, -306 )
+
+[node name="Restaurant01" parent="YSort/Buildings" instance=ExtResource( 6 )]
+position = Vector2( 51, -306 )
+
+[node name="Apartament05" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 251, -306 )
+
+[node name="Apartment16" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 351, -306 )
+
+[node name="Apartment17" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 451, -306 )
+
+[node name="Apartment18" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 651, -306 )
+
+[node name="Apartment19" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 751, -306 )
+
+[node name="Apartment20" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 851, -306 )
+
+[node name="PoliceStation01" parent="YSort/Buildings" instance=ExtResource( 11 )]
+position = Vector2( 1051, -306 )
+
+[node name="Apartment07" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -949, -204 )
+
+[node name="Apartment21" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -849, -204 )
+
+[node name="Park02" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( -649, -204 )
+
+[node name="Apartament06" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -449, -204 )
+
+[node name="Apartment22" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -349, -204 )
+
+[node name="Apartment23" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -149, -204 )
+
+[node name="Apartment24" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -49, -204 )
+
+[node name="Apartment25" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 51, -204 )
+
+[node name="Apartament07" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 251, -204 )
+
+[node name="Apartament08" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 351, -204 )
+
+[node name="Apartment26" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 551, -204 )
+
+[node name="Park03" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( 651, -204 )
+
+[node name="Club02" parent="YSort/Buildings" instance=ExtResource( 8 )]
+position = Vector2( 751, -204 )
+
+[node name="Apartament09" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 951, -204 )
+
+[node name="Apartment27" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 1051, -204 )
+
+[node name="Restaurant02" parent="YSort/Buildings" instance=ExtResource( 6 )]
+position = Vector2( -949, -102 )
+
+[node name="Apartament10" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -849, -102 )
+
+[node name="PoliceStation02" parent="YSort/Buildings" instance=ExtResource( 11 )]
+position = Vector2( -749, -102 )
+
+[node name="Apartment28" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -549, -102 )
+
+[node name="Apartment29" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -449, -102 )
+
+[node name="Apartment30" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -349, -102 )
+
+[node name="Restaurant03" parent="YSort/Buildings" instance=ExtResource( 6 )]
+position = Vector2( -149, -102 )
+
+[node name="Park04" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( -49, -102 )
+
+[node name="Apartment31" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 451, -102 )
+
+[node name="Apartment32" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 651, -102 )
+
+[node name="Apartment33" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 851, -102 )
+
+[node name="Apartament11" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 951, -102 )
+
+[node name="Apartment34" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -949, 0 )
+
+[node name="Apartment35" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -749, 0 )
+
+[node name="Club03" parent="YSort/Buildings" instance=ExtResource( 8 )]
+position = Vector2( -649, 0 )
+
+[node name="Apartment36" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -549, 0 )
+
+[node name="Apartment37" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -349, 0 )
+
+[node name="Apartment38" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -149, 0 )
+
+[node name="Apartament12" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -249, 0 )
+
+[node name="Park05" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( 751, 0 )
+
+[node name="Apartment39" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 1051, -102 )
+
+[node name="Apartment40" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 1051, 0 )
+
+[node name="Apartment41" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 951, 0 )
+
+[node name="Park06" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( -949, 102 )
+
+[node name="Apartment42" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -749, 102 )
+
+[node name="Apartment43" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -649, 102 )
+
+[node name="Apartment44" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -549, 102 )
+
+[node name="PoliceStation03" parent="YSort/Buildings" instance=ExtResource( 11 )]
+position = Vector2( -949, 204 )
+
+[node name="Apartament13" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -849, 204 )
+
+[node name="Apartment45" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -649, 204 )
+
+[node name="Park07" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( -449, 204 )
+
+[node name="Apartament14" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -349, 102 )
+
+[node name="Apartment46" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -249, 102 )
+
+[node name="Apartment47" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -149, 102 )
+
+[node name="Apartment48" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -249, 204 )
+
+[node name="Apartment49" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -149, 204 )
+
+[node name="Apartment50" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -49, 204 )
+
+[node name="Apartament15" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 151, 204 )
+
+[node name="Apartment51" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 251, 204 )
+
+[node name="Apartament16" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 551, 102 )
+
+[node name="Apartment52" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 651, 102 )
+
+[node name="Apartament17" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 751, 102 )
+
+[node name="Apartment53" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 1051, 102 )
+
+[node name="Apartment54" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 951, 102 )
+
+[node name="Apartment55" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 451, 204 )
+
+[node name="Apartment56" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 551, 204 )
+
+[node name="Club04" parent="YSort/Buildings" instance=ExtResource( 8 )]
+position = Vector2( 1051, 204 )
+
+[node name="Park08" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( 951, 204 )
+
+[node name="Apartment57" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 751, 204 )
+
 [node name="Enemies" type="YSort" parent="YSort"]
 
 [node name="Bat" parent="YSort/Enemies" instance=ExtResource( 14 )]
-position = Vector2( -16, -18 )
+position = Vector2( -200, 6 )
 
 [node name="Bat2" parent="YSort/Enemies" instance=ExtResource( 14 )]
 position = Vector2( -30, 118 )
