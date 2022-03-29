@@ -10,7 +10,7 @@ func _ready():
 	var rand_y
 	
 	
-	for i in range(10):
+	for i in range(3):
 		var Enemy = load("res://Enemies/Bat.tscn")
 		var enemy = Enemy.instance()
 		rand_x = rand_range(-900, 900)
@@ -18,7 +18,7 @@ func _ready():
 		enemy.global_position = Vector2(rand_x, rand_y)
 		enemys.add_child(enemy)
 		
-	for j in range(10):
+	for j in range(3):
 		var Enemy = load("res://Enemies/Bat.tscn")
 		var enemy = Enemy.instance()
 		rand_x = rand_range(-900, 900)
@@ -26,7 +26,7 @@ func _ready():
 		enemy.global_position = Vector2(rand_x, rand_y)
 		enemys.add_child(enemy)	
 		
-	for k in range(10):
+	for k in range(3):
 		var Enemy = load("res://Enemies/Bat.tscn")
 		var enemy = Enemy.instance()
 		rand_x = rand_range(-900, 900)
@@ -34,7 +34,7 @@ func _ready():
 		enemy.global_position = Vector2(rand_x, rand_y)
 		enemys.add_child(enemy)
 		
-	for l in range(10):
+	for l in range(3):
 		var Enemy = load("res://Enemies/Bat.tscn")
 		var enemy = Enemy.instance()
 		rand_x = rand_range(-900, 900)
@@ -42,7 +42,7 @@ func _ready():
 		enemy.global_position = Vector2(rand_x, rand_y)
 		enemys.add_child(enemy)
 	
-	for m in range(10):
+	for m in range(3):
 		var Enemy = load("res://Enemies/Bat.tscn")
 		var enemy = Enemy.instance()
 		rand_x = rand_range(-900, 900)
