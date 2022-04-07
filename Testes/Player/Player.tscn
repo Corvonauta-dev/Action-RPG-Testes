@@ -895,6 +895,7 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
+scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 script = ExtResource( 1 )
 ACCELERATION = 250
@@ -977,6 +978,7 @@ anims/Stop = SubResource( 52 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+zoom = Vector2( 0.5, 0.5 )
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="invincibility_ended" from="HurtBox" to="." method="_on_HurtBox_invincibility_ended"]

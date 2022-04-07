@@ -11,7 +11,7 @@ script = ExtResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
 current = true
-zoom = Vector2( 30, 30 )
+zoom = Vector2( 20, 20 )
 
 [node name="TileMap" type="TileMap" parent="."]
 show_behind_parent = true

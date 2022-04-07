@@ -2,20 +2,27 @@ extends Node2D
 
 var Room = preload("res://Map/ProceduralDG/Room.tscn")
 var Player = preload("res://Player/Player.tscn")
+var Boss = preload("res://Enemies/BossBat.tscn")
+var Enemie = preload("res://Enemies/Bat.tscn")
 onready var Map = $TileMap
 
 var tile_size = 32
-var num_rooms = 50
-var min_size = 4
-var max_size = 10
-var hspread = 400
+var num_rooms = 30
+var num_enemies = 3
+var min_size = 3
+var max_size = 5
+var hspread = 5
 var cull = 0.5
+
 
 var path #AStar pathfinding object
 var start_room = null
 var end_room = null
 var play_mode = false
 var player = null
+var boss = null
+var enemies = null
+var room_p = []
 
 func _ready():
 	randomize()
@@ -25,6 +32,10 @@ func _ready():
 	player = Player.instance()
 	add_child(player)
 	player.position = start_room.position
+	boss = Boss.instance()
+	add_child(boss)
+	boss.position = end_room.position
+	make_enemies()
 	play_mode = true
 
 func make_rooms():
@@ -46,7 +57,7 @@ func make_rooms():
 			room.mode = RigidBody2D.MODE_STATIC
 			room_positions.append(Vector3(room.position.x, room.position.y, 0))
 	yield(get_tree(),"idle_frame")
-	# generate a minimum spanning tree connecting the rooms 
+	# generate a minimum spanning tree connecting the rooms
 	path = find_mst(room_positions)
 		
 func _draw():
@@ -175,3 +186,12 @@ func find_end_room():
 		if room.position.x > max_x:
 			end_room = room
 			max_x = room.position.x
+
+func make_enemies():
+	for room in $Rooms.get_children():
+		for i in num_enemies:
+			if room.position != start_room.position:
+				var enemie = Enemie.instance()
+				enemie.position = room.position
+				add_child(enemie)
+				
