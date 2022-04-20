@@ -48,14 +48,14 @@ animations = [ {
 radius = 4.0
 
 [sub_resource type="CapsuleShape2D" id=8]
-radius = 7.0
-height = 4.0
+radius = 6.875
+height = 0.0
 
 [sub_resource type="CircleShape2D" id=9]
 radius = 68.1836
 
 [sub_resource type="CircleShape2D" id=10]
-radius = 3.16228
+radius = 0.8
 
 [sub_resource type="CircleShape2D" id=11]
 radius = 6.0
@@ -108,15 +108,17 @@ tracks/0/keys = {
 }
 
 [node name="Bat" type="KinematicBody2D"]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 5, 5 )
 collision_layer = 16
 script = ExtResource( 4 )
+MAX_SPEED = 5
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 12 )
+position = Vector2( 0, 8.4 )
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 2
+frame = 4
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -124,19 +126,20 @@ offset = Vector2( 0, -12 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 7 )
 
 [node name="HurtBox" parent="." instance=ExtResource( 3 )]
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-position = Vector2( 0, -13 )
+position = Vector2( 0.25, -7.125 )
 shape = SubResource( 8 )
 
 [node name="Stats" parent="." instance=ExtResource( 5 )]
-max_health = 1
 
 [node name="PlayerDetctionZone" parent="." instance=ExtResource( 6 )]
+visible = false
 
 [node name="CollisionShape2D" parent="PlayerDetctionZone" index="0"]
 modulate = Color( 1, 1, 1, 0.439216 )
@@ -145,12 +148,14 @@ shape = SubResource( 9 )
 
 [node name="HitBox" parent="." instance=ExtResource( 7 )]
 collision_mask = 4
+damage = 3
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2( 0, -14 )
+position = Vector2( 0, 7.45058e-08 )
 shape = SubResource( 10 )
 
 [node name="SoftCollision" parent="." instance=ExtResource( 8 )]
+visible = false
 
 [node name="CollisionShape2D" parent="SoftCollision" index="0"]
 shape = SubResource( 11 )
@@ -162,6 +167,7 @@ anims/RESET = SubResource( 13 )
 anims/Start = SubResource( 14 )
 anims/Stop = SubResource( 15 )
 
+[connection signal="tree_exiting" from="." to="." method="_on_Bat_tree_exiting"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="invincibility_ended" from="HurtBox" to="." method="_on_HurtBox_invincibility_ended"]
 [connection signal="invincibility_started" from="HurtBox" to="." method="_on_HurtBox_invincibility_started"]

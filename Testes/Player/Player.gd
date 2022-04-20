@@ -25,6 +25,8 @@ onready var swordHitbox = $HitboxPivot/SwordHitbox
 onready var hurtbox = $HurtBox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
+signal dead
+
 func _ready():
 	randomize()
 	stats.set_health(stats.max_health)
@@ -32,6 +34,7 @@ func _ready():
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
 	blinkAnimationPlayer.play("Stop") 
+	
 
 func _physics_process(delta):
 	match state:
@@ -105,3 +108,7 @@ func _on_HurtBox_invincibility_ended():
 
 
 
+
+
+func _on_Player_tree_exiting():
+	emit_signal("dead")

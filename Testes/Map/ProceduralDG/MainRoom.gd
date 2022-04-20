@@ -3,12 +3,13 @@ extends Node2D
 var Room = preload("res://Map/ProceduralDG/Room.tscn")
 var Player = preload("res://Player/Player.tscn")
 var Boss = preload("res://Enemies/BossBat.tscn")
+var BigBoss = preload("res://Enemies/BigBossBat.tscn")
 var Enemie = preload("res://Enemies/Bat.tscn")
 onready var Map = $TileMap
 
 var tile_size = 32
-var num_rooms = 30
-var num_enemies = 3
+export var num_rooms = 10
+export var num_enemies = 3
 var min_size = 3
 var max_size = 5
 var hspread = 5
@@ -21,22 +22,31 @@ var end_room = null
 var play_mode = false
 var player = null
 var boss = null
+var big_boss = null
 var enemies = null
 var room_p = []
 
 func _ready():
 	randomize()
+	
 	make_rooms()
 	yield(get_tree().create_timer(3),"timeout")
 	make_map()
 	player = Player.instance()
 	add_child(player)
 	player.position = start_room.position
-	boss = Boss.instance()
-	add_child(boss)
-	boss.position = end_room.position
+	player.connect("dead", self, "on_dead")
+	
+	big_boss = BigBoss.instance()
+	big_boss.position = end_room.position
+	add_child(big_boss)
+	
 	make_enemies()
 	play_mode = true
+
+func on_dead():
+	get_tree().paused = false
+	get_tree().change_scene("res://UI/Menu.tscn")
 
 func make_rooms():
 	for i in range(num_rooms):
@@ -72,27 +82,10 @@ func _draw():
 				var cp = path.get_point_position(c)
 				draw_line(Vector2(pp.x, pp.y), Vector2(cp.x, cp.y), Color(1, 1, 0), 15, true)
 	
-func _process(delta):
+func _process(delta):		
 	update()
 
-#func _input(event):
-#	if event.is_action_pressed('ui_select'):
-#		if play_mode:
-#			player.queue_free()
-#			play_mode = false
-#		for n in $Rooms.get_children():
-#			n.queue_free()
-#		path = null
-#		start_room = null
-#		end_room = null
-#		make_rooms()
-#	if event.is_action_pressed('ui_focus_next'):
-#		make_map()
-#	if event.is_action_pressed('ui_cancel'):
-#		player = Player.instance()
-#		add_child(player)
-#		player.position = start_room.position
-#		play_mode = true
+
 
 func find_mst(nodes):
 	# Prim's algorithm
@@ -189,9 +182,26 @@ func find_end_room():
 
 func make_enemies():
 	for room in $Rooms.get_children():
+		if randi() % 4 == 1:
+			if room.position != start_room.position:
+				boss = Boss.instance()
+				boss.position = room.position
+				add_child(boss)
 		for i in num_enemies:
 			if room.position != start_room.position:
 				var enemie = Enemie.instance()
 				enemie.position = room.position
 				add_child(enemie)
 				
+				
+
+
+func _on_Quit_pressed():
+	get_tree().paused = false
+	get_tree().change_scene("res://UI/Menu.tscn")
+	
+
+func _on_Player_tree_exiting():
+	get_tree().paused = false
+	get_tree().change_scene("res://UI/Menu.tscn")
+

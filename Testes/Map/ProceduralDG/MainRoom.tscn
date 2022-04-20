@@ -1,15 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Map/ProceduralDG/MainRoom.gd" type="Script" id=1]
 [ext_resource path="res://assets/tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=4]
 
 [node name="MainRoom" type="Node2D"]
 script = ExtResource( 1 )
+num_rooms = 5
 
 [node name="Rooms" type="Node" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 current = true
 zoom = Vector2( 20, 20 )
 
@@ -18,3 +20,17 @@ show_behind_parent = true
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 32, 32 )
 format = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 3 )]
+margin_left = 3.0
+margin_top = 3.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer2" instance=ExtResource( 4 )]
+
+[connection signal="pressed" from="CanvasLayer2/Pause/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+
+[editable path="CanvasLayer2/Pause"]

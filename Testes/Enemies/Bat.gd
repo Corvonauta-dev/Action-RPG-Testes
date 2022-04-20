@@ -25,6 +25,8 @@ onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 onready var animationPlayer = $AnimationPlayer
 
+signal dead
+
 func _ready():
 	randomize()
 	state = pick_random_state([IDLE, WANDER])
@@ -103,3 +105,8 @@ func _on_HurtBox_invincibility_started():
 
 func _on_HurtBox_invincibility_ended():
 	animationPlayer.play("Stop")
+
+
+func _on_Bat_tree_exiting():
+	get_tree().paused = false
+	get_tree().change_scene("res://UI/Menu.tscn")

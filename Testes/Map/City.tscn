@@ -79,7 +79,7 @@
 extents = Vector2( 1036.5, 5.5 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 9.5, 267 )
+extents = Vector2( 9.5, 593 )
 
 [node name="City" type="Node2D"]
 script = ExtResource( 17 )
@@ -90,8 +90,16 @@ cell_size = Vector2( 100, 102 )
 format = 1
 tile_data = PoolIntArray( -131082, 2, 0, -131081, 2, 0, -131080, 2, 0, -131079, 3, 0, -131078, 2, 0, -131077, 2, 0, -131076, 0, 0, -131075, 3, 0, -131074, 2, 0, -131073, 2, 0, -196608, 2, 0, -196607, 0, 0, -196606, 2, 0, -196605, 2, 0, -196604, 2, 0, -196603, 0, 0, -196602, 2, 0, -196601, 2, 0, -196600, 2, 0, -196599, 0, 0, -196598, 2, 0, -65546, 0, 0, -65545, 0, 0, -65544, 0, 0, -65543, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -10, 0, 0, -9, 0, 0, -8, 0, 0, -7, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 2, 0, -65536, 1, 0, -65535, 2, 0, -65534, 2, 0, -65533, 1, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 131062, 0, 0, 131063, 0, 0, 131064, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 2, 0, 65537, 2, 0, 65538, 3, 0, 65539, 2, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 196598, 0, 0, 196599, 0, 0, 196600, 0, 0, 196601, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0 )
 
+[node name="Streets2" type="TileMap" parent="."]
+position = Vector2( 0, 612 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 100, 102 )
+format = 1
+tile_data = PoolIntArray( -131082, 2, 0, -131081, 2, 0, -131080, 2, 0, -131079, 3, 0, -131078, 2, 0, -131077, 2, 0, -131076, 0, 0, -131075, 3, 0, -131074, 2, 0, -131073, 2, 0, -196608, 2, 0, -196607, 0, 0, -196606, 2, 0, -196605, 2, 0, -196604, 2, 0, -196603, 0, 0, -196602, 2, 0, -196601, 2, 0, -196600, 2, 0, -196599, 0, 0, -196598, 2, 0, -65546, 0, 0, -65545, 0, 0, -65544, 0, 0, -65543, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -10, 0, 0, -9, 0, 0, -8, 0, 0, -7, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 2, 0, -65536, 1, 0, -65535, 2, 0, -65534, 2, 0, -65533, 1, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 131062, 0, 0, 131063, 0, 0, 131064, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 2, 0, 65537, 2, 0, 65538, 3, 0, 65539, 2, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 196598, 0, 0, 196599, 0, 0, 196600, 0, 0, 196601, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 119, 83 )
+scale = Vector2( 0.5, 0.5 )
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="YSort" type="YSort" parent="."]
@@ -111,29 +119,80 @@ position = Vector2( 49, 0 )
 [node name="Apartment02" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 150, 0 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment02" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment02" index="2"]
+visible = false
+
 [node name="Apartment03" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( 249, 0 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment03" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment03" index="2"]
+visible = false
 
 [node name="Apartment04" parent="YSort/Buildings" instance=ExtResource( 7 )]
 position = Vector2( 50, 101 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment04" index="1"]
+visible = false
+
 [node name="Apartment05" parent="YSort/Buildings" instance=ExtResource( 8 )]
 position = Vector2( 151, 102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment05" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment05" index="2"]
+visible = false
 
 [node name="Apartment06" parent="YSort/Buildings" instance=ExtResource( 6 )]
 position = Vector2( 350, 102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment06" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment06" index="2"]
+visible = false
+
 [node name="Apartment08" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 149, -102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment08" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment08" index="2"]
+visible = false
 
 [node name="Apartment09" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 250, -101 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment09" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment09" index="2"]
+visible = false
+
 [node name="Apartment10" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 450, 0 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment10" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment10" index="2"]
+visible = false
+
 [node name="Apartment11" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( 551, 0 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment11" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment11" index="2"]
+visible = false
 
 [node name="Apartament02" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( 551, -102 )
@@ -144,14 +203,38 @@ position = Vector2( -948, -306 )
 [node name="Apartment12" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( -849, -306 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment12" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment12" index="2"]
+visible = false
+
 [node name="Apartment13" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( -749, -306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment13" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment13" index="2"]
+visible = false
 
 [node name="Apartment14" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( -549, -306 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment14" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment14" index="2"]
+visible = false
+
 [node name="Club01" parent="YSort/Buildings" instance=ExtResource( 8 )]
 position = Vector2( -449, -306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Club01" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Club01" index="2"]
+visible = false
 
 [node name="Apartament04" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( -349, -306 )
@@ -159,11 +242,26 @@ position = Vector2( -349, -306 )
 [node name="Apartment15" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( -149, -306 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment15" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment15" index="2"]
+visible = false
+
 [node name="Park01" parent="YSort/Buildings" instance=ExtResource( 7 )]
 position = Vector2( -49, -306 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Park01" index="1"]
+visible = false
+
 [node name="Restaurant01" parent="YSort/Buildings" instance=ExtResource( 6 )]
 position = Vector2( 51, -306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Restaurant01" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Restaurant01" index="2"]
+visible = false
 
 [node name="Apartament05" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( 251, -306 )
@@ -171,29 +269,80 @@ position = Vector2( 251, -306 )
 [node name="Apartment16" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 351, -306 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment16" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment16" index="2"]
+visible = false
+
 [node name="Apartment17" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( 451, -306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment17" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment17" index="2"]
+visible = false
 
 [node name="Apartment18" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 651, -306 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment18" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment18" index="2"]
+visible = false
+
 [node name="Apartment19" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 751, -306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment19" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment19" index="2"]
+visible = false
 
 [node name="Apartment20" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 851, -306 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment20" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment20" index="2"]
+visible = false
+
 [node name="PoliceStation01" parent="YSort/Buildings" instance=ExtResource( 11 )]
 position = Vector2( 1051, -306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/PoliceStation01" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/PoliceStation01" index="2"]
+visible = false
 
 [node name="Apartment07" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( -949, -204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment07" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment07" index="2"]
+visible = false
+
 [node name="Apartment21" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( -849, -204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment21" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment21" index="2"]
+visible = false
+
 [node name="Park02" parent="YSort/Buildings" instance=ExtResource( 7 )]
 position = Vector2( -649, -204 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park02" index="1"]
+visible = false
 
 [node name="Apartament06" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( -449, -204 )
@@ -201,14 +350,38 @@ position = Vector2( -449, -204 )
 [node name="Apartment22" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( -349, -204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment22" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment22" index="2"]
+visible = false
+
 [node name="Apartment23" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( -149, -204 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment23" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment23" index="2"]
+visible = false
 
 [node name="Apartment24" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( -49, -204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment24" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment24" index="2"]
+visible = false
+
 [node name="Apartment25" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 51, -204 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment25" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment25" index="2"]
+visible = false
 
 [node name="Apartament07" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( 251, -204 )
@@ -219,11 +392,26 @@ position = Vector2( 351, -204 )
 [node name="Apartment26" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( 551, -204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment26" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment26" index="2"]
+visible = false
+
 [node name="Park03" parent="YSort/Buildings" instance=ExtResource( 7 )]
 position = Vector2( 651, -204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Park03" index="1"]
+visible = false
+
 [node name="Club02" parent="YSort/Buildings" instance=ExtResource( 8 )]
 position = Vector2( 751, -204 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Club02" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Club02" index="2"]
+visible = false
 
 [node name="Apartament09" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( 951, -204 )
@@ -231,8 +419,20 @@ position = Vector2( 951, -204 )
 [node name="Apartment27" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 1051, -204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment27" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment27" index="2"]
+visible = false
+
 [node name="Restaurant02" parent="YSort/Buildings" instance=ExtResource( 6 )]
 position = Vector2( -949, -102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Restaurant02" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Restaurant02" index="2"]
+visible = false
 
 [node name="Apartament10" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( -849, -102 )
@@ -240,29 +440,80 @@ position = Vector2( -849, -102 )
 [node name="PoliceStation02" parent="YSort/Buildings" instance=ExtResource( 11 )]
 position = Vector2( -749, -102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/PoliceStation02" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/PoliceStation02" index="2"]
+visible = false
+
 [node name="Apartment28" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( -549, -102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment28" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment28" index="2"]
+visible = false
 
 [node name="Apartment29" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( -449, -102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment29" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment29" index="2"]
+visible = false
+
 [node name="Apartment30" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( -349, -102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment30" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment30" index="2"]
+visible = false
 
 [node name="Restaurant03" parent="YSort/Buildings" instance=ExtResource( 6 )]
 position = Vector2( -149, -102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Restaurant03" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Restaurant03" index="2"]
+visible = false
+
 [node name="Park04" parent="YSort/Buildings" instance=ExtResource( 7 )]
 position = Vector2( -49, -102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park04" index="1"]
+visible = false
 
 [node name="Apartment31" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 451, -102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment31" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment31" index="2"]
+visible = false
+
 [node name="Apartment32" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 651, -102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment32" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment32" index="2"]
+visible = false
+
 [node name="Apartment33" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 851, -102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment33" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment33" index="2"]
+visible = false
 
 [node name="Apartament11" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( 951, -102 )
@@ -270,20 +521,56 @@ position = Vector2( 951, -102 )
 [node name="Apartment34" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( -949, 0 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment34" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment34" index="2"]
+visible = false
+
 [node name="Apartment35" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( -749, 0 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment35" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment35" index="2"]
+visible = false
 
 [node name="Club03" parent="YSort/Buildings" instance=ExtResource( 8 )]
 position = Vector2( -649, 0 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Club03" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Club03" index="2"]
+visible = false
+
 [node name="Apartment36" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( -549, 0 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment36" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment36" index="2"]
+visible = false
 
 [node name="Apartment37" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( -349, 0 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment37" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment37" index="2"]
+visible = false
+
 [node name="Apartment38" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( -149, 0 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment38" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment38" index="2"]
+visible = false
 
 [node name="Apartament12" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( -249, 0 )
@@ -291,29 +578,77 @@ position = Vector2( -249, 0 )
 [node name="Park05" parent="YSort/Buildings" instance=ExtResource( 7 )]
 position = Vector2( 751, 0 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Park05" index="1"]
+visible = false
+
 [node name="Apartment39" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( 1051, -102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment39" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment39" index="2"]
+visible = false
 
 [node name="Apartment40" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 1051, 0 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment40" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment40" index="2"]
+visible = false
+
 [node name="Apartment41" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 951, 0 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment41" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment41" index="2"]
+visible = false
 
 [node name="Park06" parent="YSort/Buildings" instance=ExtResource( 7 )]
 position = Vector2( -949, 102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Park06" index="1"]
+visible = false
+
 [node name="Apartment42" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( -749, 102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment42" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment42" index="2"]
+visible = false
 
 [node name="Apartment43" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( -649, 102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment43" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment43" index="2"]
+visible = false
+
 [node name="Apartment44" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( -549, 102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment44" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment44" index="2"]
+visible = false
+
 [node name="PoliceStation03" parent="YSort/Buildings" instance=ExtResource( 11 )]
 position = Vector2( -949, 204 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/PoliceStation03" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/PoliceStation03" index="2"]
+visible = false
 
 [node name="Apartament13" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( -849, 204 )
@@ -321,8 +656,17 @@ position = Vector2( -849, 204 )
 [node name="Apartment45" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( -649, 204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment45" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment45" index="2"]
+visible = false
+
 [node name="Park07" parent="YSort/Buildings" instance=ExtResource( 7 )]
 position = Vector2( -449, 204 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park07" index="1"]
+visible = false
 
 [node name="Apartament14" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( -349, 102 )
@@ -330,17 +674,47 @@ position = Vector2( -349, 102 )
 [node name="Apartment46" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( -249, 102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment46" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment46" index="2"]
+visible = false
+
 [node name="Apartment47" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( -149, 102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment47" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment47" index="2"]
+visible = false
 
 [node name="Apartment48" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( -249, 204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment48" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment48" index="2"]
+visible = false
+
 [node name="Apartment49" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( -149, 204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment49" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment49" index="2"]
+visible = false
+
 [node name="Apartment50" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( -49, 204 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment50" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment50" index="2"]
+visible = false
 
 [node name="Apartament15" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( 151, 204 )
@@ -348,11 +722,23 @@ position = Vector2( 151, 204 )
 [node name="Apartment51" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 251, 204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment51" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment51" index="2"]
+visible = false
+
 [node name="Apartament16" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( 551, 102 )
 
 [node name="Apartment52" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 651, 102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment52" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment52" index="2"]
+visible = false
 
 [node name="Apartament17" parent="YSort/Buildings" instance=ExtResource( 3 )]
 position = Vector2( 751, 102 )
@@ -360,23 +746,752 @@ position = Vector2( 751, 102 )
 [node name="Apartment53" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 1051, 102 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment53" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment53" index="2"]
+visible = false
+
 [node name="Apartment54" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( 951, 102 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment54" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment54" index="2"]
+visible = false
 
 [node name="Apartment55" parent="YSort/Buildings" instance=ExtResource( 5 )]
 position = Vector2( 451, 204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment55" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment55" index="2"]
+visible = false
+
 [node name="Apartment56" parent="YSort/Buildings" instance=ExtResource( 10 )]
 position = Vector2( 551, 204 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment56" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment56" index="2"]
+visible = false
 
 [node name="Club04" parent="YSort/Buildings" instance=ExtResource( 8 )]
 position = Vector2( 1051, 204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Club04" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Club04" index="2"]
+visible = false
+
 [node name="Park08" parent="YSort/Buildings" instance=ExtResource( 7 )]
 position = Vector2( 951, 204 )
 
+[node name="CollisionShape2D" parent="YSort/Buildings/Park08" index="1"]
+visible = false
+
 [node name="Apartment57" parent="YSort/Buildings" instance=ExtResource( 4 )]
 position = Vector2( 751, 204 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment57" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment57" index="2"]
+visible = false
+
+[node name="Apartament18" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 49, 612 )
+
+[node name="Apartment58" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 150, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment58" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment58" index="2"]
+visible = false
+
+[node name="Apartment59" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 249, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment59" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment59" index="2"]
+visible = false
+
+[node name="Apartment60" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( 50, 713 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment60" index="1"]
+visible = false
+
+[node name="Apartment61" parent="YSort/Buildings" instance=ExtResource( 8 )]
+position = Vector2( 151, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment61" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment61" index="2"]
+visible = false
+
+[node name="Apartment62" parent="YSort/Buildings" instance=ExtResource( 6 )]
+position = Vector2( 350, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment62" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment62" index="2"]
+visible = false
+
+[node name="Apartment63" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 149, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment63" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment63" index="2"]
+visible = false
+
+[node name="Apartment64" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 250, 511 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment64" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment64" index="2"]
+visible = false
+
+[node name="Apartment65" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 450, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment65" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment65" index="2"]
+visible = false
+
+[node name="Apartment66" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 551, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment66" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment66" index="2"]
+visible = false
+
+[node name="Apartament19" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 551, 510 )
+
+[node name="Apartament20" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -948, 306 )
+
+[node name="Apartment67" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -849, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment67" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment67" index="2"]
+visible = false
+
+[node name="Apartment68" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -749, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment68" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment68" index="2"]
+visible = false
+
+[node name="Apartment69" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -549, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment69" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment69" index="2"]
+visible = false
+
+[node name="Club05" parent="YSort/Buildings" instance=ExtResource( 8 )]
+position = Vector2( -449, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Club05" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Club05" index="2"]
+visible = false
+
+[node name="Apartament21" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -349, 306 )
+
+[node name="Apartment70" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -149, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment70" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment70" index="2"]
+visible = false
+
+[node name="Park09" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( -49, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park09" index="1"]
+visible = false
+
+[node name="Restaurant04" parent="YSort/Buildings" instance=ExtResource( 6 )]
+position = Vector2( 51, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Restaurant04" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Restaurant04" index="2"]
+visible = false
+
+[node name="Apartament22" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 251, 306 )
+
+[node name="Apartment71" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 351, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment71" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment71" index="2"]
+visible = false
+
+[node name="Apartment72" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 451, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment72" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment72" index="2"]
+visible = false
+
+[node name="Apartment73" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 651, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment73" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment73" index="2"]
+visible = false
+
+[node name="Apartment74" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 751, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment74" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment74" index="2"]
+visible = false
+
+[node name="Apartment75" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 851, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment75" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment75" index="2"]
+visible = false
+
+[node name="PoliceStation04" parent="YSort/Buildings" instance=ExtResource( 11 )]
+position = Vector2( 1051, 306 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/PoliceStation04" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/PoliceStation04" index="2"]
+visible = false
+
+[node name="Apartment76" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -949, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment76" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment76" index="2"]
+visible = false
+
+[node name="Apartment77" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -849, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment77" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment77" index="2"]
+visible = false
+
+[node name="Park10" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( -649, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park10" index="1"]
+visible = false
+
+[node name="Apartament23" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -449, 408 )
+
+[node name="Apartment78" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -349, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment78" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment78" index="2"]
+visible = false
+
+[node name="Apartment79" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -149, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment79" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment79" index="2"]
+visible = false
+
+[node name="Apartment80" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -49, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment80" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment80" index="2"]
+visible = false
+
+[node name="Apartment81" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 51, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment81" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment81" index="2"]
+visible = false
+
+[node name="Apartament24" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 251, 408 )
+
+[node name="Apartament25" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 351, 408 )
+
+[node name="Apartment82" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 551, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment82" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment82" index="2"]
+visible = false
+
+[node name="Park11" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( 651, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park11" index="1"]
+visible = false
+
+[node name="Club06" parent="YSort/Buildings" instance=ExtResource( 8 )]
+position = Vector2( 751, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Club06" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Club06" index="2"]
+visible = false
+
+[node name="Apartament26" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 951, 408 )
+
+[node name="Apartment83" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 1051, 408 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment83" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment83" index="2"]
+visible = false
+
+[node name="Restaurant05" parent="YSort/Buildings" instance=ExtResource( 6 )]
+position = Vector2( -949, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Restaurant05" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Restaurant05" index="2"]
+visible = false
+
+[node name="Apartament27" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -849, 510 )
+
+[node name="PoliceStation05" parent="YSort/Buildings" instance=ExtResource( 11 )]
+position = Vector2( -749, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/PoliceStation05" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/PoliceStation05" index="2"]
+visible = false
+
+[node name="Apartment84" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -549, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment84" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment84" index="2"]
+visible = false
+
+[node name="Apartment85" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -449, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment85" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment85" index="2"]
+visible = false
+
+[node name="Apartment86" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -349, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment86" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment86" index="2"]
+visible = false
+
+[node name="Restaurant06" parent="YSort/Buildings" instance=ExtResource( 6 )]
+position = Vector2( -149, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Restaurant06" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Restaurant06" index="2"]
+visible = false
+
+[node name="Park12" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( -49, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park12" index="1"]
+visible = false
+
+[node name="Apartment87" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 451, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment87" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment87" index="2"]
+visible = false
+
+[node name="Apartment88" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 651, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment88" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment88" index="2"]
+visible = false
+
+[node name="Apartment89" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 851, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment89" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment89" index="2"]
+visible = false
+
+[node name="Apartament28" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 951, 510 )
+
+[node name="Apartment90" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -949, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment90" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment90" index="2"]
+visible = false
+
+[node name="Apartment91" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -749, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment91" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment91" index="2"]
+visible = false
+
+[node name="Club07" parent="YSort/Buildings" instance=ExtResource( 8 )]
+position = Vector2( -649, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Club07" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Club07" index="2"]
+visible = false
+
+[node name="Apartment92" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -549, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment92" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment92" index="2"]
+visible = false
+
+[node name="Apartment93" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -349, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment93" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment93" index="2"]
+visible = false
+
+[node name="Apartment94" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -149, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment94" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment94" index="2"]
+visible = false
+
+[node name="Apartament29" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -249, 612 )
+
+[node name="Park13" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( 751, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park13" index="1"]
+visible = false
+
+[node name="Apartment95" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 1051, 510 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment95" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment95" index="2"]
+visible = false
+
+[node name="Apartment96" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 1051, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment96" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment96" index="2"]
+visible = false
+
+[node name="Apartment97" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 951, 612 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment97" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment97" index="2"]
+visible = false
+
+[node name="Park14" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( -949, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park14" index="1"]
+visible = false
+
+[node name="Apartment98" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -749, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment98" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment98" index="2"]
+visible = false
+
+[node name="Apartment99" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -649, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment99" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment99" index="2"]
+visible = false
+
+[node name="Apartment100" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -549, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment100" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment100" index="2"]
+visible = false
+
+[node name="PoliceStation06" parent="YSort/Buildings" instance=ExtResource( 11 )]
+position = Vector2( -949, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/PoliceStation06" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/PoliceStation06" index="2"]
+visible = false
+
+[node name="Apartament30" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -849, 816 )
+
+[node name="Apartment101" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -649, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment101" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment101" index="2"]
+visible = false
+
+[node name="Park15" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( -449, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park15" index="1"]
+visible = false
+
+[node name="Apartament31" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( -349, 714 )
+
+[node name="Apartment102" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( -249, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment102" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment102" index="2"]
+visible = false
+
+[node name="Apartment103" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( -149, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment103" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment103" index="2"]
+visible = false
+
+[node name="Apartment104" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -249, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment104" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment104" index="2"]
+visible = false
+
+[node name="Apartment105" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -149, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment105" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment105" index="2"]
+visible = false
+
+[node name="Apartment106" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( -49, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment106" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment106" index="2"]
+visible = false
+
+[node name="Apartament32" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 151, 816 )
+
+[node name="Apartment107" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 251, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment107" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment107" index="2"]
+visible = false
+
+[node name="Apartament33" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 551, 714 )
+
+[node name="Apartment108" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 651, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment108" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment108" index="2"]
+visible = false
+
+[node name="Apartament34" parent="YSort/Buildings" instance=ExtResource( 3 )]
+position = Vector2( 751, 714 )
+
+[node name="Apartment109" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 1051, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment109" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment109" index="2"]
+visible = false
+
+[node name="Apartment110" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 951, 714 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment110" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment110" index="2"]
+visible = false
+
+[node name="Apartment111" parent="YSort/Buildings" instance=ExtResource( 5 )]
+position = Vector2( 451, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment111" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment111" index="2"]
+visible = false
+
+[node name="Apartment112" parent="YSort/Buildings" instance=ExtResource( 10 )]
+position = Vector2( 551, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment112" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment112" index="2"]
+visible = false
+
+[node name="Club08" parent="YSort/Buildings" instance=ExtResource( 8 )]
+position = Vector2( 1051, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Club08" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Club08" index="2"]
+visible = false
+
+[node name="Park16" parent="YSort/Buildings" instance=ExtResource( 7 )]
+position = Vector2( 951, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Park16" index="1"]
+visible = false
+
+[node name="Apartment113" parent="YSort/Buildings" instance=ExtResource( 4 )]
+position = Vector2( 751, 816 )
+
+[node name="CollisionShape2D" parent="YSort/Buildings/Apartment113" index="1"]
+visible = false
+
+[node name="Area2D" parent="YSort/Buildings/Apartment113" index="2"]
+visible = false
 
 [node name="Enemies" type="YSort" parent="YSort"]
 
@@ -395,23 +1510,206 @@ margin_bottom = 14.0
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 102, 111 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -44.5, 137.5 )
-shape = SubResource( 2 )
-
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -48, -366 )
 shape = SubResource( 2 )
 
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -48, 714 )
+shape = SubResource( 2 )
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 921, -132 )
+position = Vector2( 921, 194 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -1033.5, -132 )
+position = Vector2( -1033.5, 185 )
 shape = SubResource( 3 )
 
+[connection signal="tree_exited" from="YSort/Player" to="." method="_on_Player_tree_exited"]
 [connection signal="tree_exiting" from="YSort/Player" to="." method="_on_Player_tree_exiting"]
 [connection signal="pressed" from="CanvasLayer2/Pause/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
 
+[editable path="YSort/Buildings/Apartament01"]
+[editable path="YSort/Buildings/Apartment02"]
+[editable path="YSort/Buildings/Apartment03"]
+[editable path="YSort/Buildings/Apartment04"]
+[editable path="YSort/Buildings/Apartment05"]
+[editable path="YSort/Buildings/Apartment06"]
+[editable path="YSort/Buildings/Apartment08"]
+[editable path="YSort/Buildings/Apartment09"]
+[editable path="YSort/Buildings/Apartment10"]
+[editable path="YSort/Buildings/Apartment11"]
+[editable path="YSort/Buildings/Apartament02"]
+[editable path="YSort/Buildings/Apartament03"]
+[editable path="YSort/Buildings/Apartment12"]
+[editable path="YSort/Buildings/Apartment13"]
+[editable path="YSort/Buildings/Apartment14"]
+[editable path="YSort/Buildings/Club01"]
+[editable path="YSort/Buildings/Apartament04"]
+[editable path="YSort/Buildings/Apartment15"]
+[editable path="YSort/Buildings/Park01"]
+[editable path="YSort/Buildings/Restaurant01"]
+[editable path="YSort/Buildings/Apartament05"]
+[editable path="YSort/Buildings/Apartment16"]
+[editable path="YSort/Buildings/Apartment17"]
+[editable path="YSort/Buildings/Apartment18"]
+[editable path="YSort/Buildings/Apartment19"]
+[editable path="YSort/Buildings/Apartment20"]
+[editable path="YSort/Buildings/PoliceStation01"]
+[editable path="YSort/Buildings/Apartment07"]
+[editable path="YSort/Buildings/Apartment21"]
+[editable path="YSort/Buildings/Park02"]
+[editable path="YSort/Buildings/Apartament06"]
+[editable path="YSort/Buildings/Apartment22"]
+[editable path="YSort/Buildings/Apartment23"]
+[editable path="YSort/Buildings/Apartment24"]
+[editable path="YSort/Buildings/Apartment25"]
+[editable path="YSort/Buildings/Apartament07"]
+[editable path="YSort/Buildings/Apartament08"]
+[editable path="YSort/Buildings/Apartment26"]
+[editable path="YSort/Buildings/Park03"]
+[editable path="YSort/Buildings/Club02"]
+[editable path="YSort/Buildings/Apartament09"]
+[editable path="YSort/Buildings/Apartment27"]
+[editable path="YSort/Buildings/Restaurant02"]
+[editable path="YSort/Buildings/Apartament10"]
+[editable path="YSort/Buildings/PoliceStation02"]
+[editable path="YSort/Buildings/Apartment28"]
+[editable path="YSort/Buildings/Apartment29"]
+[editable path="YSort/Buildings/Apartment30"]
+[editable path="YSort/Buildings/Restaurant03"]
+[editable path="YSort/Buildings/Park04"]
+[editable path="YSort/Buildings/Apartment31"]
+[editable path="YSort/Buildings/Apartment32"]
+[editable path="YSort/Buildings/Apartment33"]
+[editable path="YSort/Buildings/Apartament11"]
+[editable path="YSort/Buildings/Apartment34"]
+[editable path="YSort/Buildings/Apartment35"]
+[editable path="YSort/Buildings/Club03"]
+[editable path="YSort/Buildings/Apartment36"]
+[editable path="YSort/Buildings/Apartment37"]
+[editable path="YSort/Buildings/Apartment38"]
+[editable path="YSort/Buildings/Apartament12"]
+[editable path="YSort/Buildings/Park05"]
+[editable path="YSort/Buildings/Apartment39"]
+[editable path="YSort/Buildings/Apartment40"]
+[editable path="YSort/Buildings/Apartment41"]
+[editable path="YSort/Buildings/Park06"]
+[editable path="YSort/Buildings/Apartment42"]
+[editable path="YSort/Buildings/Apartment43"]
+[editable path="YSort/Buildings/Apartment44"]
+[editable path="YSort/Buildings/PoliceStation03"]
+[editable path="YSort/Buildings/Apartament13"]
+[editable path="YSort/Buildings/Apartment45"]
+[editable path="YSort/Buildings/Park07"]
+[editable path="YSort/Buildings/Apartament14"]
+[editable path="YSort/Buildings/Apartment46"]
+[editable path="YSort/Buildings/Apartment47"]
+[editable path="YSort/Buildings/Apartment48"]
+[editable path="YSort/Buildings/Apartment49"]
+[editable path="YSort/Buildings/Apartment50"]
+[editable path="YSort/Buildings/Apartament15"]
+[editable path="YSort/Buildings/Apartment51"]
+[editable path="YSort/Buildings/Apartament16"]
+[editable path="YSort/Buildings/Apartment52"]
+[editable path="YSort/Buildings/Apartament17"]
+[editable path="YSort/Buildings/Apartment53"]
+[editable path="YSort/Buildings/Apartment54"]
+[editable path="YSort/Buildings/Apartment55"]
+[editable path="YSort/Buildings/Apartment56"]
+[editable path="YSort/Buildings/Club04"]
+[editable path="YSort/Buildings/Park08"]
+[editable path="YSort/Buildings/Apartment57"]
+[editable path="YSort/Buildings/Apartament18"]
+[editable path="YSort/Buildings/Apartment58"]
+[editable path="YSort/Buildings/Apartment59"]
+[editable path="YSort/Buildings/Apartment60"]
+[editable path="YSort/Buildings/Apartment61"]
+[editable path="YSort/Buildings/Apartment62"]
+[editable path="YSort/Buildings/Apartment63"]
+[editable path="YSort/Buildings/Apartment64"]
+[editable path="YSort/Buildings/Apartment65"]
+[editable path="YSort/Buildings/Apartment66"]
+[editable path="YSort/Buildings/Apartament19"]
+[editable path="YSort/Buildings/Apartament20"]
+[editable path="YSort/Buildings/Apartment67"]
+[editable path="YSort/Buildings/Apartment68"]
+[editable path="YSort/Buildings/Apartment69"]
+[editable path="YSort/Buildings/Club05"]
+[editable path="YSort/Buildings/Apartament21"]
+[editable path="YSort/Buildings/Apartment70"]
+[editable path="YSort/Buildings/Park09"]
+[editable path="YSort/Buildings/Restaurant04"]
+[editable path="YSort/Buildings/Apartament22"]
+[editable path="YSort/Buildings/Apartment71"]
+[editable path="YSort/Buildings/Apartment72"]
+[editable path="YSort/Buildings/Apartment73"]
+[editable path="YSort/Buildings/Apartment74"]
+[editable path="YSort/Buildings/Apartment75"]
+[editable path="YSort/Buildings/PoliceStation04"]
+[editable path="YSort/Buildings/Apartment76"]
+[editable path="YSort/Buildings/Apartment77"]
+[editable path="YSort/Buildings/Park10"]
+[editable path="YSort/Buildings/Apartament23"]
+[editable path="YSort/Buildings/Apartment78"]
+[editable path="YSort/Buildings/Apartment79"]
+[editable path="YSort/Buildings/Apartment80"]
+[editable path="YSort/Buildings/Apartment81"]
+[editable path="YSort/Buildings/Apartament24"]
+[editable path="YSort/Buildings/Apartament25"]
+[editable path="YSort/Buildings/Apartment82"]
+[editable path="YSort/Buildings/Park11"]
+[editable path="YSort/Buildings/Club06"]
+[editable path="YSort/Buildings/Apartament26"]
+[editable path="YSort/Buildings/Apartment83"]
+[editable path="YSort/Buildings/Restaurant05"]
+[editable path="YSort/Buildings/Apartament27"]
+[editable path="YSort/Buildings/PoliceStation05"]
+[editable path="YSort/Buildings/Apartment84"]
+[editable path="YSort/Buildings/Apartment85"]
+[editable path="YSort/Buildings/Apartment86"]
+[editable path="YSort/Buildings/Restaurant06"]
+[editable path="YSort/Buildings/Park12"]
+[editable path="YSort/Buildings/Apartment87"]
+[editable path="YSort/Buildings/Apartment88"]
+[editable path="YSort/Buildings/Apartment89"]
+[editable path="YSort/Buildings/Apartament28"]
+[editable path="YSort/Buildings/Apartment90"]
+[editable path="YSort/Buildings/Apartment91"]
+[editable path="YSort/Buildings/Club07"]
+[editable path="YSort/Buildings/Apartment92"]
+[editable path="YSort/Buildings/Apartment93"]
+[editable path="YSort/Buildings/Apartment94"]
+[editable path="YSort/Buildings/Apartament29"]
+[editable path="YSort/Buildings/Park13"]
+[editable path="YSort/Buildings/Apartment95"]
+[editable path="YSort/Buildings/Apartment96"]
+[editable path="YSort/Buildings/Apartment97"]
+[editable path="YSort/Buildings/Park14"]
+[editable path="YSort/Buildings/Apartment98"]
+[editable path="YSort/Buildings/Apartment99"]
+[editable path="YSort/Buildings/Apartment100"]
+[editable path="YSort/Buildings/PoliceStation06"]
+[editable path="YSort/Buildings/Apartament30"]
+[editable path="YSort/Buildings/Apartment101"]
+[editable path="YSort/Buildings/Park15"]
+[editable path="YSort/Buildings/Apartament31"]
+[editable path="YSort/Buildings/Apartment102"]
+[editable path="YSort/Buildings/Apartment103"]
+[editable path="YSort/Buildings/Apartment104"]
+[editable path="YSort/Buildings/Apartment105"]
+[editable path="YSort/Buildings/Apartment106"]
+[editable path="YSort/Buildings/Apartament32"]
+[editable path="YSort/Buildings/Apartment107"]
+[editable path="YSort/Buildings/Apartament33"]
+[editable path="YSort/Buildings/Apartment108"]
+[editable path="YSort/Buildings/Apartament34"]
+[editable path="YSort/Buildings/Apartment109"]
+[editable path="YSort/Buildings/Apartment110"]
+[editable path="YSort/Buildings/Apartment111"]
+[editable path="YSort/Buildings/Apartment112"]
+[editable path="YSort/Buildings/Club08"]
+[editable path="YSort/Buildings/Park16"]
+[editable path="YSort/Buildings/Apartment113"]
 [editable path="CanvasLayer2/Pause"]
