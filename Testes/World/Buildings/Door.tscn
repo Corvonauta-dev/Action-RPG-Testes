@@ -6,5 +6,9 @@ extents = Vector2( 6.5, 10 )
 [node name="Door" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -6, 48 )
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Door_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Door_body_exited"]

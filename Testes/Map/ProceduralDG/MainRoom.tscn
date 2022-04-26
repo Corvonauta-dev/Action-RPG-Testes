@@ -7,7 +7,7 @@
 
 [node name="MainRoom" type="Node2D"]
 script = ExtResource( 1 )
-num_rooms = 5
+num_rooms = 50
 
 [node name="Rooms" type="Node" parent="."]
 
@@ -30,6 +30,13 @@ margin_top = 3.0
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="Pause" parent="CanvasLayer2" instance=ExtResource( 4 )]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -4481.36, -1941.85 )
+scale = Vector2( 29.2143, 24.3579 )
+z_index = -2
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 317.87, -4.51862, 319, 184, -1, 182, -3, -6 )
 
 [connection signal="pressed" from="CanvasLayer2/Pause/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
 

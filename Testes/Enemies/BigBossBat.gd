@@ -108,4 +108,5 @@ func _on_HurtBox_invincibility_ended():
 
 
 func _on_Bat_tree_exiting():
-	emit_signal("dead")
+	get_tree().paused = false
+	get_tree().change_scene("res://UI/Menu.tscn")

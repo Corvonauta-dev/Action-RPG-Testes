@@ -116,7 +116,7 @@ script = ExtResource( 4 )
 material = SubResource( 12 )
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -139,8 +139,6 @@ max_health = 1
 [node name="PlayerDetctionZone" parent="." instance=ExtResource( 6 )]
 
 [node name="CollisionShape2D" parent="PlayerDetctionZone" index="0"]
-modulate = Color( 1, 1, 1, 0.439216 )
-self_modulate = Color( 0.937255, 0.937255, 0.937255, 1 )
 shape = SubResource( 9 )
 
 [node name="HitBox" parent="." instance=ExtResource( 7 )]
@@ -162,6 +160,7 @@ anims/RESET = SubResource( 13 )
 anims/Start = SubResource( 14 )
 anims/Stop = SubResource( 15 )
 
+[connection signal="tree_exiting" from="." to="." method="_on_Bat_tree_exiting"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="invincibility_ended" from="HurtBox" to="." method="_on_HurtBox_invincibility_ended"]
 [connection signal="invincibility_started" from="HurtBox" to="." method="_on_HurtBox_invincibility_started"]

@@ -3,11 +3,18 @@ extends Node2D
 
 
 onready var enemys = $YSort/Enemies
-var enemys_num = 10
-
+#var Boss = load("res://Enemies/BigBossBat.tscn")
+var Enemy = load("res://Enemies/Bat.tscn")
+export var enemys_num = 10
+export var enemys_num_clube = 8
+export var enemys_num_pizzaria = 5
+export var enemys_num_parque = 3
+var cont = 0
 var door = false
 
-onready var qg = $YSort/Buildings/Apartament01
+onready var qg = $YSort/Buildings/Apartment02
+
+
 
 func _ready():
 	randomize()
@@ -16,95 +23,107 @@ func _ready():
 	
 	qg.connect("go", self, "on_go")
 	
-	
+	#RUA 1
+	enemy_spawn(-221)
+	#clube
+	enemy_spawn_area(-468, -221, enemys_num_clube)
+	#parque
+	enemy_spawn_area(-65, -221, enemys_num_parque)
+	#pizzaria
+	enemy_spawn_area(23, -221, enemys_num_pizzaria)
+	#RUA 2
+	enemy_spawn(-123)
+	#parque
+	enemy_spawn_area(631, -123, enemys_num_parque)
+	#clube
+	enemy_spawn_area(-468, -123, enemys_num_clube)
+	#RUA 3
+	enemy_spawn(-16)
+	#pizzaria
+	enemy_spawn_area(-168, -16, enemys_num_pizzaria)
+	#parque
+	enemy_spawn_area(-64, -16, enemys_num_parque)
+	#RUA 4
+	#parque
+	enemy_spawn_area(736, 75, enemys_num_parque)
+	#RUA 5
+	enemy_spawn(186)
+	#parque
+	enemy_spawn_area(-808, 186, enemys_num_parque)
+	#parque
+	enemy_spawn_area(24, 186, enemys_num_parque)
+	#clube
+	enemy_spawn_area(136, 186, enemys_num_clube)
+	#pizzaria
+	enemy_spawn_area(336, 186, enemys_num_pizzaria)
+	#RUA 6
+	enemy_spawn(284)
+	#parque
+	enemy_spawn_area(-472, 284, enemys_num_parque)
+	#RUA 7
+	enemy_spawn(380)
+	#clube
+	enemy_spawn_area(-472, 380, enemys_num_clube)
+	#parque
+	enemy_spawn_area(-72, 380, enemys_num_parque)
+	#pizzaria
+	enemy_spawn_area(40, 380, enemys_num_pizzaria)
+	#RUA 8
+	enemy_spawn(492)
+	#parque
+	enemy_spawn_area(-656, 492, enemys_num_parque)
+	#parque
+	enemy_spawn_area(624, 492, enemys_num_parque)
+	#clube
+	enemy_spawn_area(744, 492, enemys_num_clube)
+	#RUA 9
+	enemy_spawn(588)
+	#pizzaria
+	enemy_spawn_area(-888, 588, enemys_num_pizzaria)
+	#pizzaria
+	enemy_spawn_area(-168, 588, enemys_num_pizzaria)
+	#parque
+	enemy_spawn_area(-48, 588, enemys_num_parque)
+	#RUA 10
+	enemy_spawn(692)
+	#clube
+	enemy_spawn_area(-664, 692, enemys_num_clube)
+	#parque
+	enemy_spawn_area(720, 692, enemys_num_parque)
+	#RUA 10
+	enemy_spawn(796)
+	#parque
+	enemy_spawn_area(-945, 796, enemys_num_parque)
+	#parque
+	enemy_spawn_area(40, 796, enemys_num_parque)
+	#clube
+	enemy_spawn_area(136, 796, enemys_num_clube)
+	#pizzaria
+	enemy_spawn_area(344, 796, enemys_num_pizzaria)
+	#clube
+	enemy_spawn_area(992, 796, enemys_num_clube)
+
+func enemy_spawn(var rand_y):
+	randomize()
+	var rand_x
 	for i in range(enemys_num):
-		var Enemy = load("res://Enemies/Bat.tscn")
+		#var Enemy = load("res://Enemies/Bat.tscn")
 		var enemy = Enemy.instance()
 		rand_x = rand_range(-900, 900)
-		rand_y = -221
 		enemy.global_position = Vector2(rand_x, rand_y)
 		enemys.add_child(enemy)
-		
-	for j in range(enemys_num):
-		var Enemy = load("res://Enemies/Bat.tscn")
+		enemy.connect("dead", self, "kills")
+
+func enemy_spawn_area(var x, var y, var n):
+	randomize()
+	var rand_n = rand_range(0, n)
+	for i in range(rand_n):
 		var enemy = Enemy.instance()
-		rand_x = rand_range(-900, 900)
-		rand_y = -123
-		enemy.global_position = Vector2(rand_x, rand_y)
-		enemys.add_child(enemy)	
-		
-	for k in range(enemys_num):
-		var Enemy = load("res://Enemies/Bat.tscn")
-		var enemy = Enemy.instance()
-		rand_x = rand_range(-900, 900)
-		rand_y = -16
-		enemy.global_position = Vector2(rand_x, rand_y)
+		enemy.global_position = Vector2(x, y)
 		enemys.add_child(enemy)
-		
-	#for l in range(enemys_num):
-	#	var Enemy = load("res://Enemies/Bat.tscn")
-	#	var enemy = Enemy.instance()
-	#	rand_x = rand_range(-900, 900)
-	#	rand_y = 83
-	#	enemy.global_position = Vector2(rand_x, rand_y)
-	#	enemys.add_child(enemy)
+		enemy.connect("dead", self, "kills")
 	
-	for l in range(enemys_num):
-		var Enemy = load("res://Enemies/Bat.tscn")
-		var enemy = Enemy.instance()
-		rand_x = rand_range(-900, 900)
-		rand_y = 186
-		enemy.global_position = Vector2(rand_x, rand_y)
-		enemys.add_child(enemy)
-	
-	for m in range(enemys_num):
-		var Enemy = load("res://Enemies/Bat.tscn")
-		var enemy = Enemy.instance()
-		rand_x = rand_range(-900, 900)
-		rand_y = 284
-		enemy.global_position = Vector2(rand_x, rand_y)
-		enemys.add_child(enemy)
-	
-	for n in range(enemys_num):
-		var Enemy = load("res://Enemies/Bat.tscn")
-		var enemy = Enemy.instance()
-		rand_x = rand_range(-900, 900)
-		rand_y = 380
-		enemy.global_position = Vector2(rand_x, rand_y)
-		enemys.add_child(enemy)
-	
-	for o in range(enemys_num):
-		var Enemy = load("res://Enemies/Bat.tscn")
-		var enemy = Enemy.instance()
-		rand_x = rand_range(-900, 900)
-		rand_y = 492
-		enemy.global_position = Vector2(rand_x, rand_y)
-		enemys.add_child(enemy)
-	
-	for p in range(enemys_num):
-		var Enemy = load("res://Enemies/Bat.tscn")
-		var enemy = Enemy.instance()
-		rand_x = rand_range(-900, 900)
-		rand_y = 588
-		enemy.global_position = Vector2(rand_x, rand_y)
-		enemys.add_child(enemy)
-	
-	for q in range(enemys_num):
-		var Enemy = load("res://Enemies/Bat.tscn")
-		var enemy = Enemy.instance()
-		rand_x = rand_range(-900, 900)
-		rand_y = 692
-		enemy.global_position = Vector2(rand_x, rand_y)
-		enemys.add_child(enemy)
-	
-	for r in range(enemys_num):
-		var Enemy = load("res://Enemies/Bat.tscn")
-		var enemy = Enemy.instance()
-		rand_x = rand_range(-900, 900)
-		rand_y = 796
-		enemy.global_position = Vector2(rand_x, rand_y)
-		enemys.add_child(enemy)
-	
+
 func _process(delta):
 	if door:
 		door = false
@@ -115,9 +134,17 @@ func _on_Quit_pressed():
 
 
 func _on_Player_tree_exiting():
-	if !door:
+	if door == false:
 		get_tree().paused = false
 		get_tree().change_scene("res://UI/Menu.tscn")
 
 func on_go():
+	print("porta?")
 	door = true
+	if cont >= 1:
+		get_tree().paused = false
+		get_tree().change_scene("res://Map/ProceduralDG/MainRoom.tscn")
+
+func kills():
+	cont += 1
+	print(cont)

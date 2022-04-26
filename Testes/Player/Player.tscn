@@ -15,8 +15,8 @@ shader = ExtResource( 9 )
 shader_param/active = true
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 4.0
-height = 4.0
+radius = 6.00001
+height = 3.99997
 
 [sub_resource type="Animation" id=25]
 resource_name = "AttackDown"
@@ -978,7 +978,7 @@ anims/Stop = SubResource( 52 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2( 0.6, 0.6 )
 
 [connection signal="tree_exiting" from="." to="." method="_on_Player_tree_exiting"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]

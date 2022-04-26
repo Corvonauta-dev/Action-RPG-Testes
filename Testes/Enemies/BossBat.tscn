@@ -118,7 +118,7 @@ material = SubResource( 12 )
 position = Vector2( 0, 8.4 )
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -12 )
 
