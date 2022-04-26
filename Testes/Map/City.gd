@@ -5,14 +5,18 @@ extends Node2D
 onready var enemys = $YSort/Enemies
 #var Boss = load("res://Enemies/BigBossBat.tscn")
 var Enemy = load("res://Enemies/Bat.tscn")
+var Poninters = load("res://assets/OffscreenMarker.tscn")
 export var enemys_num = 10
 export var enemys_num_clube = 8
 export var enemys_num_pizzaria = 5
 export var enemys_num_parque = 3
 var cont = 0
 var door = false
+var p = null
+var kills = 10
 
 onready var qg = $YSort/Buildings/Apartment02
+onready var qgd = $YSort/Buildings/Apartment02/Door/CollisionShape2D
 
 
 
@@ -20,8 +24,14 @@ func _ready():
 	randomize()
 	var rand_x
 	var rand_y
+	p = Poninters.instance()
+	
 	
 	qg.connect("go", self, "on_go")
+	p.global_position = Vector2(qgd.global_position.x, qgd.global_position.y)
+	$".".add_child(p)
+	p.hide()
+
 	
 	#RUA 1
 	enemy_spawn(-221)
@@ -127,6 +137,8 @@ func enemy_spawn_area(var x, var y, var n):
 func _process(delta):
 	if door:
 		door = false
+	if cont >= kills:
+		p.show()
 	
 func _on_Quit_pressed():
 	get_tree().paused = false
@@ -141,10 +153,9 @@ func _on_Player_tree_exiting():
 func on_go():
 	print("porta?")
 	door = true
-	if cont >= 1:
+	if cont >= kills:
 		get_tree().paused = false
 		get_tree().change_scene("res://Map/ProceduralDG/MainRoom.tscn")
 
 func kills():
 	cont += 1
-	print(cont)

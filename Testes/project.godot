@@ -22,7 +22,6 @@ PlayerStats="*res://Player/PlayerStats.tscn"
 
 window/size/width=320
 window/size/height=180
-window/size/fullscreen=true
 window/size/test_width=1280
 window/size/test_height=720
 window/stretch/mode="2d"
@@ -117,7 +116,3 @@ interact={
 
 common/enable_pause_aware_picking=true
 2d/default_gravity=0
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"

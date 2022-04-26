@@ -3,8 +3,11 @@ extends StaticBody2D
 onready var tween = get_node("Tween")
 var door = false
 var qgdoor = false
+onready var p = $Pointers 
 
 signal go
+
+
 
 func _process(delta):
 	if door == true:
