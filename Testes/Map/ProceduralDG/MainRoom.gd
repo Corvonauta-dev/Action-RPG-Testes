@@ -46,7 +46,7 @@ func _ready():
 
 func on_dead():
 	get_tree().paused = false
-	get_tree().change_scene("res://UI/Menu.tscn")
+	get_tree().change_scene("res://UI/Win.tscn")
 
 func make_rooms():
 	for i in range(num_rooms):
@@ -203,5 +203,5 @@ func _on_Quit_pressed():
 
 func _on_Player_tree_exiting():
 	get_tree().paused = false
-	get_tree().change_scene("res://UI/Menu.tscn")
+	get_tree().change_scene("res://UI/GameOver.tscn")
 

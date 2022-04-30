@@ -33,5 +33,3 @@ position = Vector2( -2, 1 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
-[connection signal="body_entered" from="Door" to="." method="_on_Door_body_entered"]
-[connection signal="body_exited" from="Door" to="." method="_on_Door_body_exited"]

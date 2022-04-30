@@ -12,6 +12,7 @@ export var enemys_num_pizzaria = 5
 export var enemys_num_parque = 3
 var cont = 0
 var door = false
+var dg = false
 var p = null
 var kills = 10
 
@@ -27,7 +28,7 @@ func _ready():
 	p = Poninters.instance()
 	
 	
-	qg.connect("go", self, "on_go")
+	#qg.connect("go", self, "on_go")
 	p.global_position = Vector2(qgd.global_position.x, qgd.global_position.y)
 	$".".add_child(p)
 	p.hide()
@@ -135,10 +136,12 @@ func enemy_spawn_area(var x, var y, var n):
 	
 
 func _process(delta):
-	if door:
-		door = false
 	if cont >= kills:
 		p.show()
+	if door == true:
+		if Input.is_action_just_pressed("interact"):
+			on_go()
+			
 	
 func _on_Quit_pressed():
 	get_tree().paused = false
@@ -146,16 +149,37 @@ func _on_Quit_pressed():
 
 
 func _on_Player_tree_exiting():
-	if door == false:
+	if dg == false:
 		get_tree().paused = false
-		get_tree().change_scene("res://UI/Menu.tscn")
+		get_tree().change_scene("res://UI/GameOver.tscn")
 
 func on_go():
-	print("porta?")
-	door = true
 	if cont >= kills:
+		dg = true
 		get_tree().paused = false
 		get_tree().change_scene("res://Map/ProceduralDG/MainRoom.tscn")
 
 func kills():
 	cont += 1
+
+
+
+#func _on_Door_body_exited(body):
+#	if body.get_name() == "Player":
+#		door = false
+#		print("porta saindo")
+
+#func _on_Door_body_entered(body):
+#	if body.get_name() == "Player":
+#		door = true
+#		print("porta entrando")
+
+
+func _on_Door_body_entered(body):
+	if body.get_name() == "Player":
+		door = true
+
+
+func _on_Door_body_exited(body):
+	if body.get_name() == "Player":
+		door = false
