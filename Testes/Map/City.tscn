@@ -799,7 +799,6 @@ shape = SubResource( 3 )
 position = Vector2( -1033.5, 185 )
 shape = SubResource( 3 )
 
-[connection signal="tree_exiting" from="YSort/Player" to="." method="_on_Player_tree_exiting"]
 [connection signal="body_entered" from="YSort/Buildings/Apartment02/Door" to="." method="_on_Door_body_entered"]
 [connection signal="body_exited" from="YSort/Buildings/Apartment02/Door" to="." method="_on_Door_body_exited"]
 [connection signal="pressed" from="CanvasLayer2/Pause/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

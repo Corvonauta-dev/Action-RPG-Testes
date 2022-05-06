@@ -3,7 +3,6 @@ extends Node2D
 
 
 onready var enemys = $YSort/Enemies
-#var Boss = load("res://Enemies/BigBossBat.tscn")
 var Enemy = load("res://Enemies/Bat.tscn")
 var Poninters = load("res://assets/OffscreenMarker.tscn")
 export var enemys_num = 10
@@ -18,21 +17,20 @@ var kills = 10
 
 onready var qg = $YSort/Buildings/Apartment02
 onready var qgd = $YSort/Buildings/Apartment02/Door/CollisionShape2D
-
+onready var player = $YSort/Player
 
 
 func _ready():
 	randomize()
 	var rand_x
 	var rand_y
+	
+	player.connect("dead", self, "on_dead")
+	
 	p = Poninters.instance()
-	
-	
-	#qg.connect("go", self, "on_go")
 	p.global_position = Vector2(qgd.global_position.x, qgd.global_position.y)
 	$".".add_child(p)
 	p.hide()
-
 	
 	#RUA 1
 	enemy_spawn(-221)
@@ -148,10 +146,6 @@ func _on_Quit_pressed():
 	get_tree().change_scene("res://UI/Menu.tscn")
 
 
-func _on_Player_tree_exiting():
-	if dg == false:
-		get_tree().paused = false
-		get_tree().change_scene("res://UI/GameOver.tscn")
 
 func on_go():
 	if cont >= kills:
@@ -162,17 +156,9 @@ func on_go():
 func kills():
 	cont += 1
 
-
-
-#func _on_Door_body_exited(body):
-#	if body.get_name() == "Player":
-#		door = false
-#		print("porta saindo")
-
-#func _on_Door_body_entered(body):
-#	if body.get_name() == "Player":
-#		door = true
-#		print("porta entrando")
+func on_dead():
+	get_tree().paused = false
+	get_tree().change_scene("res://UI/GameOver.tscn")
 
 
 func _on_Door_body_entered(body):

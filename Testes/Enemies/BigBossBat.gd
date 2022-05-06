@@ -26,6 +26,7 @@ onready var wanderController = $WanderController
 onready var animationPlayer = $AnimationPlayer
 
 signal dead
+signal bdead
 
 func _ready():
 	randomize()
@@ -96,7 +97,7 @@ func _on_Stats_no_health():
 	var enemyDeathEffect = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
-	
+	emit_signal("bdead")
 
 
 func _on_HurtBox_invincibility_started():
@@ -108,5 +109,4 @@ func _on_HurtBox_invincibility_ended():
 
 
 func _on_Bat_tree_exiting():
-	get_tree().paused = false
-	get_tree().change_scene("res://UI/Menu.tscn")
+	emit_signal("dead")

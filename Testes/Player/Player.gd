@@ -107,8 +107,7 @@ func _on_HurtBox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop") 
 
 
-
-
-
-func _on_Player_tree_exiting():
+func queue_free():
 	emit_signal("dead")
+
+

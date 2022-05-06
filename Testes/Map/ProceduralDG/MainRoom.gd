@@ -14,6 +14,7 @@ var min_size = 3
 var max_size = 5
 var hspread = 5
 var cull = 0.5
+var b = false
 
 
 var path #AStar pathfinding object
@@ -40,13 +41,18 @@ func _ready():
 	big_boss = BigBoss.instance()
 	big_boss.position = end_room.position
 	add_child(big_boss)
+	big_boss.connect("bdead", self, "on_dead_big_boss")
 	
 	make_enemies()
 	play_mode = true
 
 func on_dead():
 	get_tree().paused = false
-	get_tree().change_scene("res://UI/Win.tscn")
+	get_tree().change_scene("res://UI/GameOver.tscn")
+
+func on_dead_big_boss():
+		get_tree().paused = false
+		get_tree().change_scene("res://UI/Win.tscn")
 
 func make_rooms():
 	for i in range(num_rooms):
@@ -201,7 +207,4 @@ func _on_Quit_pressed():
 	get_tree().change_scene("res://UI/Menu.tscn")
 	
 
-func _on_Player_tree_exiting():
-	get_tree().paused = false
-	get_tree().change_scene("res://UI/GameOver.tscn")
 

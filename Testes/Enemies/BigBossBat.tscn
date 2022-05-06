@@ -107,18 +107,19 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
-[node name="Bat" type="KinematicBody2D"]
+[node name="BatBossBat" type="KinematicBody2D"]
 scale = Vector2( 5, 5 )
 collision_layer = 16
 script = ExtResource( 4 )
 MAX_SPEED = 5
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
 material = SubResource( 12 )
 position = Vector2( 0, 8.4 )
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 3
+frame = 4
 playing = true
 offset = Vector2( 0, -12 )
 
