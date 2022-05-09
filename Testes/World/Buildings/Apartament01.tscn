@@ -14,13 +14,11 @@ position = Vector2( 0, 11 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 0.000102997, 28.0001 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PoolVector2Array( -44, 0, 32, 0, 45, -28, 16, -28, 16, -42, -5, -42, -11, -28, -32, -28 )

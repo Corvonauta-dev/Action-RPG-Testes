@@ -24,6 +24,7 @@ onready var hurtbox = $HurtBox
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 onready var animationPlayer = $AnimationPlayer
+onready var hitBox = $HitBox
 
 signal dead
 
@@ -68,6 +69,7 @@ func _physics_process(delta):
 
 func accelerate_towards_point(point, delta):
 	var direction = global_position.direction_to(point)
+	hitBox.knockback_vector_l = direction
 	velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
 	sprite.flip_h = velocity.x < 0 
 

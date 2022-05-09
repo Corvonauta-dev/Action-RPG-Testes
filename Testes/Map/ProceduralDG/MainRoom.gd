@@ -8,7 +8,7 @@ var Enemie = preload("res://Enemies/Bat.tscn")
 onready var Map = $TileMap
 
 var tile_size = 32
-export var num_rooms = 10
+export var num_rooms = 50
 export var num_enemies = 3
 var min_size = 3
 var max_size = 5
